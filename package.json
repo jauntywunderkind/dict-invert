@@ -15,5 +15,8 @@
 	"license": "MIT",
 	"module": "dict-invert.js",
 	"esm": true,
-	"type": "module"
+	"type": "module",
+	"devDependencies": {
+		"tape": "^4.13.0"
+	}
 }
