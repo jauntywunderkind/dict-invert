@@ -1,7 +1,11 @@
 export function DictInvert( dict){
 	const
-		self= (this!== globalThis&& this)|| {},
+		hadSelf= (this!== globalThis&& this),
+		self= hadSelf|| {},
 		props= {}
+	if( !dict&& hadSelf){
+		dict= this
+	}
 	for( let [ key, val] of Object.entries( dict)){
 		// gets the key for this val
 		function get(){
